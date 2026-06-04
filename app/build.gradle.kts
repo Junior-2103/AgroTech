@@ -4,6 +4,11 @@ plugins {
 }
 
 android {
+    
+    buildFeatures {
+        viewBinding = true
+    }
+
     namespace = "com.jj.agrotech"
     compileSdk {
         version = release(36)
