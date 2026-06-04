@@ -1,10 +1,10 @@
-package com.jj.agrotech
+package com.jj.agrotech.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.jj.agrotech.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
