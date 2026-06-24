@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/background"
-    android:padding="15dp"
-    tools:context=".fragments.WelcomeFragment">
+    android:background="@color/background"
+    android:padding="15dp">
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
-        android:textColor="@color/accent_text"
+        android:textColor="@color/accent_color"
         android:textStyle="bold"
 
         android:textSize="16sp"
@@ -36,12 +35,13 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/playfair_display"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/playfair_display_medium"
         android:text="@string/welcome_title"
         android:textAlignment="center"
-        android:textColor="@color/accent_text"
+        android:textColor="@color/accent_color"
         android:textSize="48sp"
-        android:layout_marginBottom="18dp"
+        android:textStyle="italic"
 
         app:layout_constraintBottom_toTopOf="@id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +57,7 @@
 
         android:textAlignment="center"
         android:textColor="@color/text"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/spacer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,11 +94,11 @@
         android:layout_width="0dp"
         android:layout_height="52dp"
         android:text="@string/welcome_login"
-        android:textColor="@color/accent_text"
+        android:textColor="@color/accent_color"
 
         app:backgroundTint="@color/surface_color"
         app:strokeColor="@color/text"
-        app:strokeWidth="2dp"
+        app:strokeWidth="1dp"
         app:cornerRadius="12dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
