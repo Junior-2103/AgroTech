@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    android:padding="15dp">
+    android:background="@color/background">
 
     <TextView
         android:id="@+id/tv_welcome_app_name"
@@ -14,8 +13,10 @@
         android:text="@string/app_name"
         android:textColor="@color/accent_color"
         android:textStyle="bold"
-
         android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+
         app:layout_constraintBottom_toTopOf="@id/spacer_welcome_between_app_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +62,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/inter_light"
         android:text="@string/welcome_description"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
 
         android:textAlignment="center"
         android:textColor="@color/text"
@@ -87,6 +90,8 @@
         android:backgroundTint="@color/secondary_color"
         android:textColor="@color/white"
         android:text="@string/welcome_start"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
 
         app:cornerRadius="12dp"
 
@@ -103,6 +108,9 @@
         android:layout_height="52dp"
         android:text="@string/welcome_login"
         android:textColor="@color/accent_color"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="6dp"
 
         app:backgroundTint="@color/surface_color"
         app:strokeColor="@color/text"
