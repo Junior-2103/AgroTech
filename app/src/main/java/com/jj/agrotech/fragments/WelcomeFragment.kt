@@ -25,7 +25,7 @@ class WelcomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnWelcomeStart.setOnClickListener {
-            findNavController().navigate(R.id.action_welcomeFragment_to_registerFragment)
+            println("Hello World")
         }
 
     }
