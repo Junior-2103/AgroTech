@@ -1,4 +1,4 @@
-package com.jj.agrotech.fragments
+package com.jj.agrotech.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
