@@ -12,6 +12,7 @@ navigationFragmentKtx = "2.9.8"
 recyclerview = "1.4.0"
 roomCompiler = "2.8.4"
 ksp = "2.0.21-1.0.28"
+kotlinCsv = "1.10.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -28,6 +29,7 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+kotlin-csv = { group = "com.github.doyaaaaaken", name = "kotlin-csv-jvm", version.ref = "kotlinCsv" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
