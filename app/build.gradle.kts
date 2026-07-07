@@ -56,4 +56,6 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     implementation(libs.kotlin.csv)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
 }
