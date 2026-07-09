@@ -42,10 +42,14 @@ class HomeFragment : Fragment() {
         val useCase = GetAlertsUseCase(plantaRepository,weatherRepository,alertSystem)
 
         viewLifecycleOwner.lifecycleScope.launch {
-            val plantasAlerts = useCase.execute()
+            val useCaseResult = useCase.execute()
 
-            if (plantasAlerts.isSuccess) {
-                val plantasWithAlerts = plantasAlerts.getOrNull()!!.filterValues { it.isNotEmpty() }
+            if (useCaseResult.isSuccess) {
+                val (weather, plantasAlerts) = useCaseResult.getOrNull()!!
+
+                binding.tv3.text = "${weather.currentWeather.temperature.toInt()}ºC"
+
+                val plantasWithAlerts = plantasAlerts.filterValues { it.isNotEmpty() }
                 val listAdapter = plantasWithAlerts.toList()
                 val recyclerViewAlert : RecyclerView = binding.rvAlerts
                 recyclerViewAlert.layoutManager = LinearLayoutManager(requireContext())

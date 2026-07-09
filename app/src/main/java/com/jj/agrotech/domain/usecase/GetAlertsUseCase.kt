@@ -1,6 +1,7 @@
 package com.jj.agrotech.domain.usecase
 
 import com.jj.agrotech.data.local.entity.Planta
+import com.jj.agrotech.data.remote.model.WeatherResponse
 import com.jj.agrotech.data.repository.PlantaRepository
 import com.jj.agrotech.data.repository.WeatherRepository
 import com.jj.agrotech.domain.Alert
@@ -11,7 +12,7 @@ class GetAlertsUseCase(
     private val weatherRepository: WeatherRepository,
     private val alertSystem: AlertSystem
 ) {
-    suspend fun execute() : Result<Map<Planta, List<Alert>>> {
+    suspend fun execute() : Result<Pair<WeatherResponse,Map<Planta, List<Alert>>>> {
         val weatherResult = weatherRepository.getWeather()
 
         if (weatherResult.isFailure) {
@@ -26,6 +27,6 @@ class GetAlertsUseCase(
             plantasAlerts[planta] = alerts
         }
 
-        return Result.success(plantasAlerts)
+        return Result.success(weather to plantasAlerts )
     }
 }
