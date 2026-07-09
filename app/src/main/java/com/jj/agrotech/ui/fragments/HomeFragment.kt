@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,11 +43,21 @@ class HomeFragment : Fragment() {
 
         viewLifecycleOwner.lifecycleScope.launch {
             val plantasAlerts = useCase.execute()
-            val plantasWithAlerts = plantasAlerts.filterValues { it.isNotEmpty() }
-            val listAdapter = plantasWithAlerts.toList()
-            val recyclerViewAlert : RecyclerView = binding.rvAlerts
-            recyclerViewAlert.layoutManager = LinearLayoutManager(requireContext())
-            recyclerViewAlert.adapter = PlantaAlertsAdapter(listAdapter)
+
+            if (plantasAlerts.isSuccess) {
+                val plantasWithAlerts = plantasAlerts.getOrNull()!!.filterValues { it.isNotEmpty() }
+                val listAdapter = plantasWithAlerts.toList()
+                val recyclerViewAlert : RecyclerView = binding.rvAlerts
+                recyclerViewAlert.layoutManager = LinearLayoutManager(requireContext())
+                recyclerViewAlert.adapter = PlantaAlertsAdapter(listAdapter)
+            } else {
+                Toast.makeText(
+                    requireContext(),
+                    "Não foi possivel carregar o clima, Verifique a conexão",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+
         }
 
     }

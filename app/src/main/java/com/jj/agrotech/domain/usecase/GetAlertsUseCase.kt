@@ -11,15 +11,21 @@ class GetAlertsUseCase(
     private val weatherRepository: WeatherRepository,
     private val alertSystem: AlertSystem
 ) {
-    suspend fun execute() : Map<Planta, List<Alert>> {
+    suspend fun execute() : Result<Map<Planta, List<Alert>>> {
+        val weatherResult = weatherRepository.getWeather()
+
+        if (weatherResult.isFailure) {
+            return Result.failure(weatherResult.exceptionOrNull()!!)
+        }
+
         val plantasAlerts = mutableMapOf<Planta, List<Alert>>()
-        val weather = weatherRepository.getWeather()
+        val weather = weatherResult.getOrNull()!!
 
         plantaRepository.getAll().forEach { planta ->
             val alerts = alertSystem.checkAll(planta, weather)
             plantasAlerts[planta] = alerts
         }
 
-        return plantasAlerts
+        return Result.success(plantasAlerts)
     }
 }

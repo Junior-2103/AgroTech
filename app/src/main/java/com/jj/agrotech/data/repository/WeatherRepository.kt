@@ -10,11 +10,13 @@ class WeatherRepository {
         private const val PARAMETERS = "temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,cloud_cover"
     }
 
-    suspend fun getWeather() : WeatherResponse {
-        return RetrofitProvider.openMeteoService.getWeather(
-            LATITUDE,
-            LONGITUDE,
-            PARAMETERS
-        )
+    suspend fun getWeather() : Result<WeatherResponse> {
+        return runCatching {
+            RetrofitProvider.openMeteoService.getWeather(
+                LATITUDE,
+                LONGITUDE,
+                PARAMETERS
+            )
+        }
     }
 }
