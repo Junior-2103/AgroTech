@@ -12,7 +12,7 @@
         android:layout_width="6dp"
         android:layout_height="match_parent"
         android:layout_marginEnd="8dp"
-        tools:background="#FFA500" />
+        tools:background="@color/alert" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -27,13 +27,15 @@
             android:textSize="14sp"
             android:textStyle="bold"
             android:fontFamily="@font/inter_light"
-            tools:text="Aviso" />
+            tools:text="Aviso"
+            tools:textColor="@color/on_warning"/>
 
         <TextView
             android:id="@+id/tv_alert_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="12sp"
+            android:textColor="@color/text"
             tools:text="Temperatura -20ºC, evite regar à noite" />
 
     </LinearLayout>

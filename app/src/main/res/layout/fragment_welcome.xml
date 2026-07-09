@@ -68,7 +68,7 @@
 
         android:textAlignment="center"
         android:textColor="@color/text"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@id/spacer_welcome_between_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
