@@ -12,7 +12,10 @@ data class CurrentWeather(
     val precipitation: Double,
 
     @SerializedName("cloud_cover")
-    val cloudCover: Int
+    val cloudCover: Int,
+
+    @SerializedName("weather_code")
+    val weatherCode: String
 )
 
 data class WeatherResponse(

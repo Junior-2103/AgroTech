@@ -1,10 +1,12 @@
 package com.jj.agrotech.ui.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,6 +17,7 @@ import com.jj.agrotech.databinding.FragmentHomeBinding
 import com.jj.agrotech.domain.AlertSystem
 import com.jj.agrotech.domain.usecase.GetAlertsUseCase
 import com.jj.agrotech.ui.adapters.PlantaAlertsAdapter
+import com.jj.agrotech.ui.util.WeatherCodeMapper
 import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
@@ -33,11 +36,13 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val plantaRepository = PlantaRepository(requireContext())
         val weatherRepository = WeatherRepository()
+        val weatherCodeMapper = WeatherCodeMapper()
         val alertSystem = AlertSystem()
         val useCase = GetAlertsUseCase(plantaRepository,weatherRepository,alertSystem)
 
@@ -46,8 +51,17 @@ class HomeFragment : Fragment() {
 
             if (useCaseResult.isSuccess) {
                 val (weather, plantasAlerts) = useCaseResult.getOrNull()!!
+                val (idImage, message) = weatherCodeMapper.weatherCodeToText(weather.currentWeather.weatherCode.toInt())
 
-                binding.tv3.text = "${weather.currentWeather.temperature.toInt()}ºC"
+                binding.tvTemperature.text = "${weather.currentWeather.temperature.toInt()}ºC"
+                binding.tvHumidity.text = "${weather.currentWeather.humidity}%"
+                binding.tvWind.text = "${weather.currentWeather.windSpeed} km/h"
+                binding.tvPrecipitation.text = "${weather.currentWeather.precipitation} mm"
+                binding.tvCondition.text = message
+
+                val drawable = ContextCompat.getDrawable(requireContext(),idImage)
+
+                binding.ivWeather.setImageDrawable(drawable)
 
                 val plantasWithAlerts = plantasAlerts.filterValues { it.isNotEmpty() }
                 val listAdapter = plantasWithAlerts.toList()

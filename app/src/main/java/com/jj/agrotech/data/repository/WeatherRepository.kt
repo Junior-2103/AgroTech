@@ -7,7 +7,7 @@ class WeatherRepository {
     companion object {
         private const val LATITUDE = -23.4194
         private const val LONGITUDE = -51.4244
-        private const val PARAMETERS = "temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,cloud_cover"
+        private const val PARAMETERS = "temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,cloud_cover,weather_code"
     }
 
     suspend fun getWeather() : Result<WeatherResponse> {

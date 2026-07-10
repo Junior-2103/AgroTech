@@ -91,6 +91,7 @@
         android:backgroundTint="@color/secondary"
         android:textColor="@color/white"
         android:text="@string/welcome_start"
+        android:textSize="16sp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="6dp"
