@@ -1,69 +1,82 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="800dp"
-    android:height="800dp"
-    android:viewportWidth="48"
-    android:viewportHeight="48">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="800" height="800">
+  <!-- Círculo principal -->
   <path
-      android:strokeWidth="1"
-      android:pathData="M24,13A11,11 0,1 1,13 24,11 11,0 0,1 24,13Z"
-      android:strokeLineJoin="round"
-      android:fillColor="@color/surface"
-      android:strokeColor="@color/surface"
-      android:strokeLineCap="round"/>
+      d="M24,13A11,11 0,1 1,13 24,11 11,0 0,1 24,13Z"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="#FEFFEF"/>
+  
+  <!-- Linha superior -->
   <path
-      android:strokeWidth="1"
-      android:pathData="M24,3.5L24,9.61"
-      android:strokeLineJoin="round"
-      android:fillColor="@color/surface"
-      android:strokeColor="@color/surface"
-      android:strokeLineCap="round"/>
+      d="M24,3.5L24,9.61"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha superior-direita diagonal -->
   <path
-      android:strokeWidth="1"
-      android:pathData="M38.5,9.5L34.18,13.82"
-      android:strokeLineJoin="round"
-      android:fillColor="@color/surface"
-      android:strokeColor="@color/surface"
-      android:strokeLineCap="round"/>
+      d="M38.5,9.5L34.18,13.82"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha direita -->
   <path
-      android:strokeWidth="1"
-      android:pathData="M44.5,24L38.39,24"
-      android:strokeLineJoin="round"
-      android:fillColor="@color/surface"
-      android:strokeColor="@color/surface"
-      android:strokeLineCap="round"/>
+      d="M44.5,24L38.39,24"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha inferior-direita diagonal -->
   <path
-      android:strokeWidth="1"
-      android:pathData="M38.5,38.5L34.18,34.18"
-      android:strokeLineJoin="round"
-      android:fillColor="@color/surface"
-      android:strokeColor="@color/surface"
-      android:strokeLineCap="round"/>
+      d="M38.5,38.5L34.18,34.18"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha inferior -->
   <path
-      android:strokeWidth="1"
-      android:pathData="M24,44.5L24,38.39"
-      android:strokeLineJoin="round"
-      android:fillColor="@color/surface"
-      android:strokeColor="@color/surface"
-      android:strokeLineCap="round"/>
+      d="M24,44.5L24,38.39"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha inferior-esquerda diagonal -->
   <path
-      android:strokeWidth="1"
-      android:pathData="M9.5,38.5L13.82,34.18"
-      android:strokeLineJoin="round"
-      android:fillColor="@color/surface"
-      android:strokeColor="@color/surface"
-      android:strokeLineCap="round"/>
+      d="M9.5,38.5L13.82,34.18"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha esquerda -->
   <path
-      android:strokeWidth="1"
-      android:pathData="M3.5,24L9.61,24"
-      android:strokeLineJoin="round"
-      android:fillColor="@color/surface"
-      android:strokeColor="@color/surface"
-      android:strokeLineCap="round"/>
+      d="M3.5,24L9.61,24"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha superior-esquerda diagonal -->
   <path
-      android:strokeWidth="1"
-      android:pathData="M9.5,9.5L13.82,13.82"
-      android:strokeLineJoin="round"
-      android:fillColor="@color/surface"
-      android:strokeColor="@color/surface"
-      android:strokeLineCap="round"/>
-</vector>
+      d="M9.5,9.5L13.82,13.82"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+</svg>
