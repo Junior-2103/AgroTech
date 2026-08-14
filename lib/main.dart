@@ -1,3 +1,4 @@
+import 'package:agrotech/config/app_routes.dart';
 import 'package:agrotech/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class AgroTech extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'AgroTech',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.green)),
+      routes: AppRoutes.getRoutes(context),
       home: const WelcomeScreen(),
     );
   }
