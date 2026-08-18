@@ -1,8 +1,8 @@
 import 'package:agrotech/config/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../theme.dart';
-import '../constants.dart';
+import 'package:agrotech/theme.dart';
+import 'package:agrotech/constants.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
