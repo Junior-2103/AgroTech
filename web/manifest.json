@@ -1,6 +1,6 @@
 {
-    "name": "agrotech",
-    "short_name": "agrotech",
+    "name": "AgroTech",
+    "short_name": "AgroTech",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

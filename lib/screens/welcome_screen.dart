@@ -1,8 +1,9 @@
-import 'package:agrotech/config/app_routes.dart';
+import 'package:agrotech/configs/app_routes.dart';
+import 'package:agrotech/constants/app_assets.dart';
+import 'package:agrotech/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:agrotech/theme.dart';
-import 'package:agrotech/constants.dart';
+import 'package:agrotech/themes/app_colors.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -10,15 +11,21 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
-        backgroundColor: backgroundColor,
-        title: Text("AgroTech", style: TextStyle(color: accentColor)),
+        backgroundColor: AppColors.backgroundColor,
+        title: Text(
+          AppStrings.appName,
+          style: TextStyle(color: AppColors.accentColor),
+        ),
       ),
       body: Stack(
         children: [
           Positioned.fill(
-            child: SvgPicture.asset("assets/svgs/ic_welcome_plant.svg"),
+            child: SvgPicture.asset(
+              AppAssets.iconWelcomePlant,
+              fit: BoxFit.cover,
+            ),
           ),
           Padding(
             padding: EdgeInsets.all(20),
@@ -26,20 +33,20 @@ class WelcomeScreen extends StatelessWidget {
               children: [
                 Spacer(),
                 Text(
-                  welcomeTitle,
+                  AppStrings.welcomeTitle,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: accentColor,
-                    fontSize: 52,
+                    color: AppColors.accentColor,
+                    fontSize: 46,
                     fontFamily: "PlayfairDisplay",
                   ),
                 ),
                 Text(
-                  appDescription,
+                  AppStrings.appDescription,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: textColor,
-                    fontSize: 20,
+                    color: AppColors.textColor,
+                    fontSize: 16,
                     fontFamily: "Inter",
                   ),
                 ),
@@ -52,7 +59,7 @@ class WelcomeScreen extends StatelessWidget {
                       Navigator.pushReplacementNamed(context, AppRoutes.home);
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: secondaryColor,
+                      backgroundColor: AppColors.secondaryColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadiusGeometry.all(
                           Radius.circular(10),
@@ -60,8 +67,11 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      startButton,
-                      style: TextStyle(color: whiteColor, fontSize: 20),
+                      AppStrings.startButton,
+                      style: TextStyle(
+                        color: AppColors.whiteColor,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                 ),
