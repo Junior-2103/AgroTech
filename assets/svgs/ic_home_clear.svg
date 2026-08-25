@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="800" height="800">
+  <!-- Círculo principal -->
+  <path
+      d="M24,13A11,11 0,1 1,13 24,11 11,0 0,1 24,13Z"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="#FEFFEF"/>
+  
+  <!-- Linha superior -->
+  <path
+      d="M24,3.5L24,9.61"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha superior-direita diagonal -->
+  <path
+      d="M38.5,9.5L34.18,13.82"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha direita -->
+  <path
+      d="M44.5,24L38.39,24"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha inferior-direita diagonal -->
+  <path
+      d="M38.5,38.5L34.18,34.18"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha inferior -->
+  <path
+      d="M24,44.5L24,38.39"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha inferior-esquerda diagonal -->
+  <path
+      d="M9.5,38.5L13.82,34.18"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha esquerda -->
+  <path
+      d="M3.5,24L9.61,24"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+  
+  <!-- Linha superior-esquerda diagonal -->
+  <path
+      d="M9.5,9.5L13.82,13.82"
+      stroke="#FEFFEF"
+      stroke-width="1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"/>
+</svg>

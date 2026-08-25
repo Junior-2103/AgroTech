@@ -1,34 +1,69 @@
-# Gradle files
-.gradle/
-build/
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+**/build/
+coverage/
+lib/generated_plugin_registrant.dart
+web/generated_plugin_registrant.dart
 
-# Local configuration file (sdk path, etc)
-local.properties
-
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
+# Android / Gradle / Kotlin
+**/.gradle/
+**/local.properties
+**/.cxx/
+**/.externalNativeBuild/
+**/captures/
+**/output-metadata.json
 *.aab
 *.apk
-output-metadata.json
+*.hprof
+*.kt.bak
 
-# IntelliJ
+# Serviços e arquivos sensíveis
+**/google-services.json
+
+# IntelliJ / Android Studio / VS Code
 *.iml
 .idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+.vscode/
+*.ipr
+*.iws
 
-# Keystore files
+# Keystores
 *.jks
 *.keystore
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+# iOS
+**/ios/**/Pods/
+**/ios/**/Flutter/ephemeral/
+**/ios/**/Flutter/Generated.xcconfig
+**/ios/**/Flutter/flutter_export_environment.sh
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
 
-# Android Profiling
-*.hprof
+# macOS
+**/macos/**/Pods/
+**/macos/**/Flutter/ephemeral/
+**/macos/**/Flutter/GeneratedPluginRegistrant.swift
+
+# Símbolos e mapas de obfuscação
+app.*.symbols
+app.*.map.json
+
+# Arquivos temporários
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history/
+.svn/
+migrate_working_dir/
